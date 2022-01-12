@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace WpfGitDemo
 {
@@ -20,9 +21,23 @@ namespace WpfGitDemo
     /// </summary>
     public partial class MainWindow : Window
     {
+        DispatcherTimer _dispatcherTimer;
+
         public MainWindow()
         {
             InitializeComponent();
+            _dispatcherTimer = new DispatcherTimer();
+            _dispatcherTimer.Interval = TimeSpan.FromMilliseconds(50);
+            _dispatcherTimer.Tick += _dispatcherTimer_Tick;
+            _dispatcherTimer.Start();
+        }
+
+        private void _dispatcherTimer_Tick(object sender, EventArgs e)
+        {
+            if (pbrTest.Value < 100)
+                pbrTest.Value++;
+            else
+                _dispatcherTimer.Stop();
         }
     }
 }

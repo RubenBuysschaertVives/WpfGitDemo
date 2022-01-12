@@ -6,8 +6,10 @@
         xmlns:local="clr-namespace:WpfGitDemo"
         mc:Ignorable="d"
         Title="Git demo in WPF" Height="150" Width="300"
-        Background="Tomato" Margin="10">
-    <Grid>
-        <Label>Hello World.</Label>
-    </Grid>
+        Background="Tomato" Margin="10" FontSize="24">
+    <StackPanel>
+        <Label HorizontalAlignment="Center">Hello World.</Label>
+        <ProgressBar Name="pbrTest" Minimum="0" Maximum="100"
+                     Value="0" Height="20" Margin="10"></ProgressBar>
+    </StackPanel>
 </Window>
