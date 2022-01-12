@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfGitDemo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Git demo in WPF" Height="150" Width="300"
+        Background="Tomato" Margin="10">
     <Grid>
-        
+        <Label>Hello World.</Label>
     </Grid>
 </Window>
